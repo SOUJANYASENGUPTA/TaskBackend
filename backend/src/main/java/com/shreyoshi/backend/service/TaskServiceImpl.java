@@ -37,6 +37,7 @@ public class TaskServiceImpl implements TaskService {
         Task task = taskRepository.findById(id).orElse(null);
 
         if (task != null) {
+            task.setId(taskDetails.getId());
             task.setProjectId(taskDetails.getProjectId());
             task.setName(taskDetails.getName());
             task.setDescription(taskDetails.getDescription());

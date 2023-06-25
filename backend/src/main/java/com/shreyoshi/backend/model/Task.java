@@ -22,7 +22,8 @@ public class Task {
     public Task() {
     }
 
-    public Task(Long projectId, String name, String description, String assignedTo, String priority, String deadline, String status) {
+    public Task(Long taskId, Long projectId, String name, String description, String assignedTo, String priority, String deadline, String status) {
+        this.id = taskId;
         this.projectId = projectId;
         this.name = name;
         this.description = description;
